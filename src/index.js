@@ -65,8 +65,8 @@ export function customLocalLambdaAuthorizer({
       });
       debug(`[success] %o`, context);
 
-      set(req, 'apiGateway.event.requestContext.authorizer', context);
-      debug(`[context-set:apiGateway.event.requestContext.authorizer]`);
+      set(req, 'requestContext.authorizer', context);
+      debug(`[context-set:requestContext.authorizer]`);
     } catch (error) {
       debug(`[error:${error.message}] %o`, error);
       return res.status(401).json({error});

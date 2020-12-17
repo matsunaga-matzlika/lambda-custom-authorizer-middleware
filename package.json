@@ -11,7 +11,7 @@
     "coverage": "jest --coverage",
     "docs": "documentation readme src/index.js --section API --shallow",
     "lint": "eslint . --fix --format=./node_modules/eslint-formatter-pretty",
-    "prepublishOnly": "npm run build && npm run docs",
+    "prepare": "npm run build && npm run docs",
     "test": "jest"
   },
   "dependencies": {
